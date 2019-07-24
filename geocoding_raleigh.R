@@ -5,7 +5,7 @@ library(maps)
 
 data <- read.csv("raleigh_restaurants.csv")
 
-register_google(key = "AIzaSyDabSZ8Cz6CHXoqAb8Tx3UJOeOQvZFkeyE") ## sets google API key
+## set google API key
 
 data <- data %>%
   unite(col = address, address, locality, sep = ", ")
