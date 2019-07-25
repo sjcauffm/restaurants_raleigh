@@ -17,6 +17,8 @@ locations <- do.call(rbind.data.frame,lat_long)
 data$lat <- locations$lat
 data$long <- locations$lon
 
+save(data, file = "restaurants_data.rda")
+
 ##### MAKING THE MAP
 raleigh_basic <- get_map(location = c(lon = -78.6382, lat = 35.8), zoom = 12, maptype = "satellite",
                    source = "google")
